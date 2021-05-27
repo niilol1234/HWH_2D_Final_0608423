@@ -22,8 +22,20 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private float timer;
 
+    [Header("血量")]
+    public float hp = 200;
+    [Header("血條系統")]
+    public HpManager hpManager;
+    [Header("角色是否死亡")]
+    public bool isDead = false;
+
+
+    private float hpMax;
+
     private void Start()
     {
+        hpMax = hp;       // 取得血量最大值
+
         // 玩家變形 = 尋找遊戲物件("物件名稱").變形
         player = GameObject.Find("玩家").transform;
     }
@@ -49,6 +61,8 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void Track()
     {
+        if (isDead) return;
+
         // 距離 等於 三維向量 的 距離(A點，B點)
         float dis = Vector3.Distance(transform.position, player.position);
 
@@ -77,10 +91,32 @@ public class Enemy : MonoBehaviour
             timer = 0;                  // 計時器 歸零
             psAttack.Play();            // 播放 攻擊特效
 
-            // 2D 碰撞 = 2D 物理.覆蓋圓形範圍(中心點，半徑)
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, rangeAttack);
+            // 2D 碰撞 = 2D 物理.覆蓋圓形範圍(中心點，半徑，圖層)
+            Collider2D hit = Physics2D.OverlapCircle(transform.position, rangeAttack, 1 << 9);
             // 碰到的物件 取得元件<玩家>().受傷(攻擊力);
             hit.GetComponent<Player>().Hit(attack);
         }  
+
+    }
+
+    /// <summary>
+    /// 受傷
+    /// </summary>
+    /// <param name="damage">接受到的傷害值</param>
+    public void Hit(float damage)
+    {
+        hp -= damage;                           // 扣除傷害值
+        hpManager.UpdateHpBar(hp, hpMax);       // 更新血條
+        StartCoroutine(hpManager.ShowDamage(damage)); // 啟動協同程序(顯示傷害值())
+
+        if (hp <= 0) Dead();
+
+    }
+
+    private void Dead()
+    {
+        hp = 0;
+        isDead = true;
+        Destroy(gameObject, 1.5f);                    // 消失
     }
 }
