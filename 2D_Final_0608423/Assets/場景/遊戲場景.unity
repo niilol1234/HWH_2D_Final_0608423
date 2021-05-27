@@ -4722,6 +4722,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 150449130}
+  rectDamage: {fileID: 7154768048646889591, guid: 8cd6b99443705ea449176503336a8ba8,
+    type: 3}
 --- !u!1 &335351743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7747,7 +7749,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3321786837392053282, guid: d480f5dca1023b7499ce46e30c84f11d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10578,7 +10580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620669591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 530810921}
@@ -11281,7 +11283,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0.11, z: -1}
+    m_Position: {x: 0, y: 0.11, z: -2}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
@@ -16092,7 +16094,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 418040989706042425, guid: 73dba1bd9065d6846b3702b5a5fcf66a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16162,6 +16164,7 @@ MonoBehaviour:
   aud: {fileID: 2062100379}
   soundAttack: {fileID: 8300000, guid: ac85ec4e8e4fda445bcbc12594a167c9, type: 3}
   hp: 200
+  hpManager: {fileID: 269904693}
   soundEat: {fileID: 8300000, guid: db11e40005724144db5d293c4fa52b83, type: 3}
   textGrass: {fileID: 1290636793}
 --- !u!50 &2062100377
