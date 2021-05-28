@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
 
 
     private Transform player;
+    private Player _player;
     /// <summary>
     /// 計時器
     /// </summary>
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
 
         // 玩家變形 = 尋找遊戲物件("物件名稱").變形
         player = GameObject.Find("玩家").transform;
+        _player = player.GetComponent<Player>();
     }
 
     // 繪製圖示事件：在 Unity 內顯示輔助開發

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1107 &-8401390762228721293
+--- !u!1107 &-2704790672235472523
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 3326750309587419152}
-    m_Position: {x: 473.64685, y: 145.41687, z: 0}
+    m_State: {fileID: 4991825736879726127}
+    m_Position: {x: 325.73364, y: 138.41203, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -19,10 +19,10 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 60, y: 200, z: 0}
+  m_ExitPosition: {x: 40, y: 210, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 3326750309587419152}
---- !u!206 &-4345334478667426281
+  m_DefaultState: {fileID: 4991825736879726127}
+--- !u!206 &-1203852093640723090
 BlendTree:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,7 +47,7 @@ BlendTree:
     m_DirectBlendParameter: "\u5782\u76F4"
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: bae0234a59fa18648ac0ffffebd75070, type: 2}
+    m_Motion: {fileID: 7400000, guid: 0e6fc17e871ee0d498489b7db33752cf, type: 2}
     m_Threshold: 0.6666667
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -55,7 +55,7 @@ BlendTree:
     m_DirectBlendParameter: "\u5782\u76F4"
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 42e71ffa8e888404c81437c7385a3491, type: 2}
+    m_Motion: {fileID: 7400000, guid: 9f143b1ff50600347935589f8be3b1b0, type: 2}
     m_Threshold: 1
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -75,7 +75,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "\u6575\u4EBA 1"
+  m_Name: "\u6575\u4EBA"
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: "\u5782\u76F4"
@@ -93,7 +93,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: -8401390762228721293}
+    m_StateMachine: {fileID: -2704790672235472523}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -103,7 +103,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &3326750309587419152
+--- !u!1102 &4991825736879726127
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -123,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -4345334478667426281}
+  m_Motion: {fileID: -1203852093640723090}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
